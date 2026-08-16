@@ -1,10 +1,10 @@
-import { Route } from "react-router-dom"
+import HomePage from "./page/Home"
 
 function App() {
 
   return (
     <>
-
+<HomePage/>
     </>
   )
 }
