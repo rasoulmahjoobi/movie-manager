@@ -8,9 +8,10 @@ import useDeleteMovie from "../hooks/useDeleteMovie";
 type Props = {
   movies: Movie[];
   onEdit: () => void;
+  currentPage: number;
 };
 
-function MovieCard({ movies, onEdit }: Props) {
+function MovieCard({ movies, onEdit, currentPage }: Props) {
   const dispatch = useDispatch();
   const favorites = useSelector((state: RootState) => state.movie.favorites);
   const { mutate: deleteMovie } = useDeleteMovie();
@@ -43,10 +44,11 @@ function MovieCard({ movies, onEdit }: Props) {
         <tbody>
           {movies.map((movie, index) => {
             const isFavorite = favorites.includes(movie.id);
+            const rowNumber = (currentPage - 1) * 5 + index + 1;
 
             return (
               <tr key={movie.id} className="border-t hover:bg-gray-50">
-                <td className="px-5 py-4">{index + 1}</td>
+                <td className="px-5 py-4">{rowNumber}</td>
 
                 <td className="px-5 py-4">
                   <div className="flex gap-4">

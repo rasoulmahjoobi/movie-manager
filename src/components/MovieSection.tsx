@@ -9,11 +9,11 @@ import useMovies from "../hooks/useMovies";
 import ButtonAdd from "./button-add";
 import Filter from "./Filter";
 import Search from "./SearchBar";
-import MovieCard from "./MovieCard";
 import MovieModal from "./MovieModal";
 import Pagination from "./Pagination";
 import Loading from "./Loading";
 import Error from "./Error";
+import MovieCard from "./MovieCard";
 
 function MovieSection() {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ function MovieSection() {
   const dispatch = useDispatch();
 
   const currentPage = useSelector(
-    (state: RootState) => state.movie.currentPage
+    (state: RootState) => state.movie.currentPage,
   );
 
   const { data, isLoading, isError } = useMovies(currentPage);
@@ -52,8 +52,11 @@ function MovieSection() {
 
       <div className="flex items-start gap-6 px-4">
         <div className="flex-1">
-          <MovieCard movies={data || []} onEdit={() => setOpen(true)} />
-
+          <MovieCard
+            movies={data || []}
+            onEdit={() => setOpen(true)}
+            currentPage={currentPage}
+          />
           <div className="py-4">
             <Pagination
               currentPage={currentPage}
