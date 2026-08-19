@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast"
 import HomePage from "./page/Home"
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <>
 <HomePage/>
+<Toaster/>
     </>
   )
 }

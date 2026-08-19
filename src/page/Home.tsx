@@ -1,4 +1,4 @@
-import MovieSection from "../components/ MovieSection";
+import MovieSection from "../components/MovieSection";
 // import ButtonAdd from "../components/button-add";
 // import Filter from "../components/Filter";
 import Header from "../components/header/Header";
