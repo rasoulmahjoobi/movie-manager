@@ -1,75 +1,81 @@
-# React + TypeScript + Vite
+# Movie Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern movie management web application built with React and TypeScript. The project demonstrates practical experience with state management, server-state management, API communication, client-side routing, and persistent application data.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- TypeScript
+- Vite
+- Redux Toolkit
+- React Query
+- React Router
+- Axios
+- Redux Persist
+- Tailwind CSS
+- JSON Server
+- Lucide React
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Movie management interface
+- Client-side routing with React Router
+- Global state management with Redux Toolkit
+- Persistent Redux state with Redux Persist
+- Server-state management with React Query
+- HTTP requests using Axios
+- Local mock REST API using JSON Server
+- Responsive user interface with Tailwind CSS
+- Type-safe development with TypeScript
+- Reusable React components
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+src/
+├── api/
+├── components/
+├── hooks/
+├── page/
+├── reduxe/
+├── types/
+└── utils/
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Make sure you have Node.js installed on your machine.
 
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+git clone https://github.com/rasoulmahjoobi/movie-manager.git
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Navigate to the project directory:
 
-```
+cd movie-manager
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+## Development
+
+The application uses JSON Server as a local mock REST API.
+
+Start JSON Server according to the project's configuration before using features that require the local API.
+
+## What I Practiced
+
+Through this project, I practiced building a modern React application with TypeScript and Vite while working with Redux Toolkit, React Query, Axios, React Router, and Redux Persist.
+
+The project also provided practical experience with API communication, server-state management, persistent client-side state, reusable components, and responsive UI development.
+
+## Repository
+
+GitHub: https://github.com/rasoulmahjoobi/movie-manager
